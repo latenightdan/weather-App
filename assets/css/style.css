@@ -4,3 +4,9 @@
 .col-8{
     background-color: red;
 } */
+.humidity, .wind {
+    display: inline-block;
+}
+.temp{
+    display:inline-block;
+}

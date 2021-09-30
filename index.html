@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="assets/css/style.css" />
   <title>Document</title>
 </head>
-<header> weather Dashboard</header>
+<!-- <header> weather Dashboard</header> -->
 
 <body>
   <div class="row">
@@ -22,21 +22,42 @@
       <div class="card">
         <h3 class="card-header text-uppercase">Search By User</h3>
         <form id="user-form" class="card-body">
-          <label class="form-label" for="username">Username</label>
-          <input name="username" id="username" type="text" autofocus="true" class="form-input" />
-          <button type="submit" class="btn">Get User</button>
+          <label class="form-label" for="username">CITY</label>
+          <input name="city" id="city" type="text" autofocus="true" class="form-input"  />
+          <button type="submit" class="btn">GET WEATHER</button>
         </form>
+
+        <!-- <div id = "wind">wind = </div> -->
       </div>
      
     </div>
-    <div class="col-8">
-      Lorem ipsum,
-      dolor sit amet
-      consectetur adipisicing elit. Quisquam accusantium natus labore voluptatum distinctio molestiae rerum animi vel
-      minima voluptates repudiandae laborum nemo, mollitia ipsa, facere eius illo explicabo reiciendis?
+    <div class="col-8 " id = "weather-block-main">
+      <h3 id = "weather-block-title">csdc </h3>
+      
+      
+      <div class = "temp">temp = 
+        <div class ="temp" id = "temperature">
+        </div>
+      </div>
+      
+      <br>
+      <div class = "wind">wind = 
+        <div class ="wind" id = "windd">
+        </div>
+      </div>
+      <br>
+      <div class = "humidity">humidity = 
+        <div class ="humidity" id = "humid">
+        </div>
+      </div>
+      <br>
+      <div class = "temp">temp = 
+        <div class ="temp" id = "temperature">
+        </div>
+      </div>
     </div>
   </div>
-  <div class="row">
+  <!-- <div class="row">
     <div class="col">
     </div>
     <div class="col-8">
@@ -48,7 +69,7 @@
         <div class = "col">sd</div>
         <div class = "col">cdsdc</div>
       
-  </div>
+  </div> -->
 </body>
 
 

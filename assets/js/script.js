@@ -1,30 +1,30 @@
-// var userInputEl = document.querySelector("#user-form");
-// var weatherInput = document.getElementById("#city");
-// var city = document.querySelector("#city");
-// var weatherBlockEl = document.querySelector("#weather-block-title");
-// var humidityEl = document.querySelector("#humid");
-// var tempEl = document.querySelector("#temperature");
-// var windEl = document.querySelector("#windd");
+var userInputEl = document.querySelector("#user-form");
+var weatherInput = document.getElementById("#city");
+var city = document.querySelector("#city");
+var weatherBlockEl = document.querySelector("#weather-block-title");
+var humidityEl = document.querySelector("#humid");
+var tempEl = document.querySelector("#temperature");
+var windEl = document.querySelector("#windd");
 
-// function userInputHandler(event) {
-//     event.preventDefault();
-//     var cityData = city.value.trim();
-//     if (cityData) {
-//         city.value = "";
-//         getWeatherData(cityData);
+function userInputHandler(event) {
+    event.preventDefault();
+    var cityData = city.value.trim();
+    if (cityData) {
+        city.value = "";
+        getWeatherData(cityData);
 
 
-//         // console.log(cityData)
-//         // console.log(city.value);
+        // console.log(cityData)
+        // console.log(city.value);
 
-//     }
-//     else {
+    }
+    else {
 
-//     }
+    }
 
-// }
+}
 
-// userInputEl.addEventListener("submit", userInputHandler);
+userInputEl.addEventListener("submit", userInputHandler);
 
 
 
@@ -35,7 +35,7 @@ var getWeatherData = function (city) {
         response.json().then(function (data) {
             // console.log(data);
             // console.log(city);
-            // console.log(data);
+            console.log(data);
             displayWeather(data, city);
         });
     });
@@ -45,19 +45,19 @@ var getWeatherData = function (city) {
 var displayWeather = function (weather, city) {
     console.log(weather.list[0].main.humidity);
     console.log(city);
-    console.log(weather);
-//   weatherBlockEl.textContent = city;
-//   humidityEl.textContent = "";
-//   var humidityy = weather.main.humidity;
-//   var humidEl = document.createElement("span");
-//   humidEl.textContent = humidityy + "%";
-// humidityEl.appendChild(humidEl);
+    console.log(weather.city.name);
+  weatherBlockEl.textContent = weather.city.name + " " + weather.list[0].dt_txt;
+  humidityEl.textContent = "";
+  var humidityy = weather.list[0].main.humidity;
+  var humidEl = document.createElement("span");
+  humidEl.textContent = humidityy + "%";
+humidityEl.appendChild(humidEl);
 
-// tempEl.textContent = "";
-//   var temperaturee = weather.main.humidity;
-//   var tempyyEl = document.createElement("span");
-//   tempyyEl.textContent = temperaturee + "%";
-// tempEl.appendChild(tempyyEl);
+tempEl.textContent = "";
+  var temperaturee = weather.list[0].main.temp;
+  var tempyyEl = document.createElement("span");
+  tempyyEl.textContent = temperaturee + "%";
+tempEl.appendChild(tempyyEl);
 
 // windEl.textContent = "";
 // var windd = weather.wind.speed;

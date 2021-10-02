@@ -11,6 +11,13 @@
     display:inline-block;
 }
 
-.five-day{
+.daily{
     background-color: cornflowerblue;
+    padding: 5%;
+    margin: 3%;
+}
+.dailyTwo{
+    background-color:green;
+    padding: 5%;
+    margin: 3%;
 }

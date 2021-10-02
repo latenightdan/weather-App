@@ -9,7 +9,7 @@ var buttons = document.querySelector("#city-buttonn");
 btns = document.getElementsByClassName("city-button");
 var daily = document.querySelector(".daily");
 var tempTwo = document.querySelector(".tempOne");
-
+var tempppEl = document.getElementsById("#dailyTwo");
 
 //button input
 for (var i = 0; i < btns.length; i++) {
@@ -18,7 +18,7 @@ for (var i = 0; i < btns.length; i++) {
 
         console.log(text);
         getWeatherData(text);
-
+        
     });
 }
 
@@ -54,54 +54,53 @@ var getWeatherData = function (city) {
             // console.log(city);
             createFourDay(data);
             displayWeather(data, city);
-
+            
         });
     });
 
 };
 
-var createFourDay = function (weatherr) {
-    console.log(weatherr.list);
-    for (i = 0; i < weatherr.list.length; i++) {
+var createFourDay = function(weatherr){
+   console.log(weatherr.list);
+   for(i = 0; i < weatherr.list.length; i++){
+       
+       var tempData = weatherr.list[i].main.temp;
+      
+       
+    //    tempppEl.textContent = "";
+       tempppEl.classList = "col align-self-end dailyTwo"
+       var tempText = document.createElement("span");
+       tempText.textContent = "temp: " + tempData + " F";
+       console.log(tempText)
+       tempppEl.appendChild(tempText);
+// tempppEl.appendChild(tempText)
+// var windData = weatherr.list[i].wind.speed;
+// console.log(windData)
+// var windEll = document.createElement("div");
+// windEll.classList = "col align-self-end dailyTwo"
+// var windText = document.createElement("span");
+// windText.textContent = "wind Speed: " + windText + "MPH"
 
-        var tempData = weatherr.list[i].main.temp;
+// daily.textContent = tempText;
+// tempppEl.appendChild(tempText);
 
-        var tempppEl = document.createElement("div");
-        tempppEl.classList = "col align-self-end dailyTwo"
-        var tempText = document.createElement("span");
-        tempText.textContent = "temp: " + tempData + " F ";
-
-
-
-        var windData = weatherr.list[i].wind.speed;
-        console.log(windData)
-        var windEll = document.createElement("div");
-        windEll.classList = "col align-self-end dailyTwo"
-        var windText = document.createElement("span");
-        windText.textContent = "wind Speed: " + windData + "MPH "
-
-
-
-        daily.innerHTML = "";
-        daily.appendChild(tempppEl);
-        daily.appendChild(windEll);
-        // windEll.appendChild(windText);
-        tempppEl.appendChild(tempText);
-        tempppEl.appendChild(windText)
-
-
-        windEll.appendChild(tempText);
-        windEll.appendChild(windText);
+// daily.text = tempText;
+        
+         
+ 
+    
 
 
-
-
-        //    weatherBlockEl.appendChild(butt);
-        // var humidBlock = beep.list[i].main.humidity;
-        // var humidBlockEl = document.createElement("span");
-        // humidBlockEl.textContent = humidBlock + "%";
-        // daily.appendChild(humidBlock);
-    }
+    
+    
+    
+    
+      //    weatherBlockEl.appendChild(butt);
+    // var humidBlock = beep.list[i].main.humidity;
+    // var humidBlockEl = document.createElement("span");
+    // humidBlockEl.textContent = humidBlock + "%";
+    // daily.appendChild(humidBlock);
+   }
 }
 
 
@@ -109,7 +108,7 @@ var displayWeather = function (weather, city) {
     console.log(weather.list[0].main.humidity);
     console.log(city);
     console.log(weather.city.name);
-
+    
     weatherBlockEl.textContent = weather.city.name + " " + weather.list[0].dt_txt;
 
     humidityEl.textContent = "";

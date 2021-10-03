@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="assets/css/style.css" />
   <title>Document</title>
 </head>
-<!-- <header> weather Dashboard</header> -->
+<header> weather Dashboard</header>
 
 <body>
   
@@ -21,7 +21,7 @@
     <div class="col">
       <h5 class="card-header"> Search weather</h5>
       <div class="card">
-        <h3 class="card-header text-uppercase">Search By User</h3>
+        <h3 class="card-header text-uppercase">Search City</h3>
         <form id="user-form" class="card-body">
           <label class="form-label" for="username">CITY</label>
           <input name="city" id="city" type="text" autofocus="true" class="form-input"  />
@@ -62,7 +62,7 @@
     
   </div>
   <div class = "row">
-    <div class = "col">
+    <div class = "col btn">
       <div class="col align-self-center">
         <button id = "city-buttonn" class ="city-button">London</button>
       </div>
@@ -78,12 +78,14 @@
     </div>
     <div class = "col-8">
       <div class="container">
-        <div class="row daily">
-          <div class = "col align-self-end dailyTwo"> </div>
+        <h3 class = "hourly"> 3 hour forecast</h3>
+        <div class="row daily" id = "daily">
+          
+          <!-- <div class = "col align-self-end dailyTwo"> </div>
           <div class = "col align-self-end dailyTwo"></div>
           <div class = "col align-self-end dailyTwo"></div>
           <div class = "col align-self-end dailyTwo"></div>
-          <div class = "col align-self-end dailyTwo"></div>
+          <div class = "col align-self-end dailyTwo"></div> -->
         
         </div>
       </div>

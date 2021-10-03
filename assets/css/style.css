@@ -12,12 +12,36 @@
 }
 
 .daily{
-    background-color: cornflowerblue;
+  
+   
+}
+.dailyTwo{
+    background-color: black;
+    color: white;
     padding: 5%;
     margin: 3%;
 }
-.dailyTwo{
-    background-color:green;
+header{
+    background-color: black;
+    color: white;
+    padding: 2%;
+}
+.btn{
+   
+    color: white;
+    padding: 1%;
+   
+  
+}
+.city-button{
+    border-radius: 2px;
+    background: black;
+    margin: 1%;
     padding: 5%;
-    margin: 3%;
+    width: 60%;
+    height: 50%;
+    color: white;
+}
+.hot{
+    background-color: red;
 }

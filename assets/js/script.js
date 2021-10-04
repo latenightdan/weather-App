@@ -60,6 +60,8 @@ var getWeatherData = function (city) {
 
 };
 daily.textContent = "";
+
+//makes blocks + data
 var createFourDay = function(weatherr){
    console.log(weatherr.list);
    $("#daily").empty();
@@ -74,10 +76,7 @@ var createFourDay = function(weatherr){
       
     var tempppEl = document.createElement("div");
     tempppEl.classList = "col align-self-end dailyTwo"
-    //    if(tempText > 60){
-    //        tempppEl.removeAttribute()
-    //    }
-    //    tempppEl.textContent = "";
+  
        
     var titleEl = document.createElement("h4");
 titleEl.textContent = title;
@@ -95,34 +94,7 @@ tempppEl.appendChild(titleEl);
        tempppEl.appendChild(humidityText);
        daily.appendChild(tempppEl);
 
-    //    console.log(tempText)
-    //    tempppEl.appendChild(tempText);
-// tempppEl.appendChild(tempText)
 
-
-
-
-
-
-// daily.textContent = tempText;
-// tempppEl.appendChild(tempText);
-
-// daily.text = tempText;
-        
-         
- 
-    
-
-
-    
-    
-    
-    
-      //    weatherBlockEl.appendChild(butt);
-    // var humidBlock = beep.list[i].main.humidity;
-    // var humidBlockEl = document.createElement("span");
-    // humidBlockEl.textContent = humidBlock + "%";
-    // daily.appendChild(humidBlock);
    }
 }
 
@@ -167,3 +139,38 @@ getWeatherData("red bank");
 //     getWeatherData(text);
 // }
 // buttons.addEventListener("click", setText);
+
+
+    //    console.log(tempText)
+    //    tempppEl.appendChild(tempText);
+// tempppEl.appendChild(tempText)
+
+
+
+
+
+
+// daily.textContent = tempText;
+// tempppEl.appendChild(tempText);
+
+// daily.text = tempText;
+        
+         
+ 
+    
+
+
+    
+    
+    
+    
+      //    weatherBlockEl.appendChild(butt);
+    // var humidBlock = beep.list[i].main.humidity;
+    // var humidBlockEl = document.createElement("span");
+    // humidBlockEl.textContent = humidBlock + "%";
+    // daily.appendChild(humidBlock);
+
+      //    if(tempText > 60){
+    //        tempppEl.removeAttribute()
+    //    }
+    //    tempppEl.textContent = "";
